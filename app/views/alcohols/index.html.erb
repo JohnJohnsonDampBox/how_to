@@ -1,0 +1,32 @@
+<h1>Listing alcohols</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Decsription</th>
+      <th>Ingredients</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @alcohols.each do |alcohol| %>
+      <tr>
+        <td><%= alcohol.name %></td>
+        <td><%= alcohol.decsription %></td>
+        <td><%= alcohol.ingredients %></td>
+
+        <td><%= link_to 'Show', alcohol %></td>
+        <td><%= link_to 'Edit', edit_alcohol_path(alcohol) %></td>
+        <td><%= link_to 'Destroy', alcohol, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Alcohol', new_alcohol_path %>

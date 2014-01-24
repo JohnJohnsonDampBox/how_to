@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Step number:</strong>
+  <%= @step.step_number %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @step.description %>
+</p>
+
+<%= link_to 'Edit', edit_alcohol_step_path(@alcohol, @step) %> |
+<%= link_to 'Back', alcohol_steps_path %>

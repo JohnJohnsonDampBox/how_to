@@ -1,0 +1,30 @@
+<h1>Listing steps</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Step number</th>
+      <th>Description</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @steps.each do |step| %>
+      <tr>
+        <td><%= step.step_number %></td>
+        <td><%= step.description %></td>
+        <td><%= link_to 'Show', [@alcohol, step] %></td>
+        <td><%= link_to 'Edit', edit_alcohol_step_path(@alcohol, step) %></td>
+        <td><%= link_to 'Destroy', [@alcohol,step], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Step', new_alcohol_step_path(@alcohol) %>
+<%= link_to 'Main Alcohol', alcohol_path(@alcohol) %>

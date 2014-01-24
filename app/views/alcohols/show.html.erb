@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @alcohol.name %>
+</p>
+
+<p>
+  <strong>Decsription:</strong>
+  <%= @alcohol.decsription %>
+</p>
+
+<p>
+  <strong>Ingredients:</strong>
+  <%= @alcohol.ingredients %>
+</p>
+
+<%= link_to 'Edit', edit_alcohol_path(@alcohol) %> |
+<%= link_to 'Back', alcohols_path %>
+<%= link_to 'Steps', alcohol_steps_path(@alcohol) %>
