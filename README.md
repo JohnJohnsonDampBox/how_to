@@ -1,3 +1,3 @@
 How To
 ======
-A nested resource exercise in how to guide form
+A cool nested resource exercise in how to guide form
